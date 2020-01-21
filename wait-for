@@ -21,7 +21,8 @@ USAGE
 
 wait_for() {
   for i in `seq $TIMEOUT` ; do
-    curl $URL > /dev/null 2>&1
+    # curl $URL > /dev/null 2>&1
+    curl -vvvv $URL
 
     result=$?
     if [ $result -eq 0 ] ; then
